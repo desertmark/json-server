@@ -1,10 +1,10 @@
 FROM node
 
-workdir /var/server
+COPY . /server
 
-ADD ./db.json ./
-ADD ./routes.json ./
-ADD ./middlewares.js ./
+WORKDIR /server
+
+EXPOSE 80
 
 RUN npm i -g json-server
-CMD ["npm" "start"]
+CMD npm start
