@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run serve",
     "copy:db": "cpy ./db.original.json ./ --rename=db.json",
-    "serve": "json-server -m middlewares.js -p 80 -r routes.json db.json",
+    "serve": "json-server -m middlewares.js -p 8080 -r routes.json db.json",
     "serve-delayed": "npm run copy:db && json-server -m middlewares.js -p 8080 -r routes.json -d 1000 db.json"
   },
   "author": "",

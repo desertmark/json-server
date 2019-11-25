@@ -4,7 +4,7 @@ COPY . /server
 
 WORKDIR /server
 
-EXPOSE 80
+EXPOSE 8080
 
 RUN npm i -g json-server
 CMD npm start
